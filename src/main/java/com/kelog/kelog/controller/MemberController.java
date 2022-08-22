@@ -23,7 +23,7 @@ public class MemberController {
     @ResponseBody
     public String Signup(@RequestPart(required = false,value = "file") MultipartFile multipartFile,
                          @RequestPart(value = "info")SignUpRequestDto requestDto) throws IOException {
-
+        System.out.println("---------------------------------------------------------");
 
         return memberService.Signup(multipartFile,requestDto);
     }
